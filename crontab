@@ -1,0 +1,13 @@
+UR=$(date +"%H")
+GREET=""
+if [ $HOUR -ge 5 ] && [ $HOUR -lt 12 ]; then
+ GREET="Hi, Good Morning! Sagar"
+elif [ $HOUR -ge 12 ] && [ $HOUR -lt 17 ]; then
+ GREET="Good Afternoon! Sagar"
+elif [ $HOUR -ge 17 ] && [ $HOUR -lt 21 ]; then
+ GREET="Good Evening! Sagar"
+else
+ GREET="It's Late Sagar, Go to sleep"
+fi
+echo $GREET > greet.txt
+
